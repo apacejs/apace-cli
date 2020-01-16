@@ -1,11 +1,35 @@
 {
   "name": "@quickly/cli",
   "version": "0.0.1",
+  "bin": {
+    "quickly": "./bin/quickly.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "description": "quickly write restful-api server",
   "scripts": {
+    "start:dev": "PORT=21001 supervisor dist/app.js",
+    "ts:watch": "tsc --watch --preserveWatchOutput",
+    "ts:build": "tsc",
+    "dev": "npm run ts:build && concurrently \"npm run ts:watch\"",
+    "start": "PORT=22001 supervisor dist/app.js",
+    "build": "tsc --rootDir ./src --outDir ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "dkvirus",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "supervisor": "^0.12.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0"
+  }
 }
