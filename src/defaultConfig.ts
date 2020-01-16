@@ -1,5 +1,5 @@
 module.exports = {
     port: 8000,
-    apiPrefix: '/api/v1',
+    apiPrefix: '',
     routerPath: '/router'
 }

@@ -1,10 +1,10 @@
-import Dev from './dev'
+import dev from './dev'
 
 const cmd = process.argv[2]
 
 switch (cmd) {
     case 'dev':
-        new Dev().start()
+        dev()
         break;
     default:
         console.log('unknown cmd ...')
