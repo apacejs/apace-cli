@@ -1,9 +1,10 @@
 {
-  "name": "@quickly/cli",
+  "name": "@apace/cli",
   "version": "0.0.1",
   "bin": {
-    "quickly": "./bin/quickly.js"
+    "apace": "./bin/apace.js"
   },
+  "main": "./dist/app.js",
   "files": [
     "bin",
     "dist"
@@ -12,10 +13,9 @@
   "scripts": {
     "start:dev": "PORT=21001 supervisor dist/app.js",
     "ts:watch": "tsc --watch --preserveWatchOutput",
-    "ts:build": "tsc",
+    "ts:build": "rm -rf dist && tsc",
     "dev": "npm run ts:build && concurrently \"npm run ts:watch\"",
     "start": "PORT=22001 supervisor dist/app.js",
-    "build": "tsc --rootDir ./src --outDir ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,5 +31,8 @@
     "http-status-codes": "^1.4.0",
     "nodemon": "^2.0.2",
     "typescript": "^3.7.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

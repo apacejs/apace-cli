@@ -1,4 +1,4 @@
-import express, { RequestHandler } from 'express'
+import express from 'express'
 import path from 'path'
 import fs from 'fs'
 
@@ -9,7 +9,7 @@ import ignoreFavicon from './middlewares/ignoreFavicon'
 
 const app = express()
 
-const configPath = path.join(process.cwd(), '.quickly.js')
+const configPath = path.join(process.cwd(), '.apace.js')
 const defaultConfig = require('./defaultConfig')
 let config = defaultConfig
 if (fs.existsSync(configPath)) {
@@ -38,7 +38,7 @@ try {
         }
     }
 } catch (e) {
-    console.log('Error in external middlewares in .quickly.js')
+    console.log('Error in external middlewares in .apace.js')
 }
 
 // Router
@@ -52,3 +52,5 @@ app.use(errorHandler.errorHandler())
 app.listen(config.port, () => {
     console.log(`server is starting on port http://localhost:${config.port}`)
 })
+
+export default express.Router()
