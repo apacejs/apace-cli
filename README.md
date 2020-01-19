@@ -11,7 +11,7 @@ quickly develop restful API use NodeJS.
 ``` bash
 $ mkdir my-project && cd my-project 
 $ npm init -y
-$ yarn add @apace/cli
+$ yarn add @apacejs/cli
 ```
 
 **Step2**
