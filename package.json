@@ -1,5 +1,5 @@
 {
-  "name": "@apace/cli",
+  "name": "@apacejs/cli",
   "version": "0.0.1",
   "bin": {
     "apace": "./bin/apace.js"
@@ -34,5 +34,13 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apacejs/apace-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apacejs/apace-cli/issues"
+  },
+  "homepage": "https://github.com/apacejs/apace-cli#readme"
 }

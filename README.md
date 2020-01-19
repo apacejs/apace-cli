@@ -24,7 +24,6 @@ edit content
 const express = require('express')
 const app = express.Router()
 
-// 
 app.get('/', (req, res) => res.json({ greet: 'hello Apace' }))
 
 module.exports = app
